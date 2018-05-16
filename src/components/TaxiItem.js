@@ -2,7 +2,22 @@ import React from 'react';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
+import CheckIcon from '@material-ui/icons/Check';
+import OffIcon from '@material-ui/icons/HighlightOff';
 import Types from '../types';
+import './TaxiItem.css'
+
+const ACTIVE = 'ACTIVE';
+
+const isActive = state => state === ACTIVE;
+
+const getStateIcon = (state) => {
+  if (isActive(state)) {
+    return <CheckIcon />;
+  }
+
+  return <OffIcon className="TaxiItem-alert" />;
+};
 
 const TaxiItem = (props) => {
   const { id, state, coordinate } = props.data;
@@ -15,7 +30,7 @@ const TaxiItem = (props) => {
             {id}
           </Typography>
           <Typography color="textSecondary">
-            State: {state}
+            State: {getStateIcon(state)}
           </Typography>
           <Typography color="textSecondary">
             Latitude: {coordinate.latitude} <br />

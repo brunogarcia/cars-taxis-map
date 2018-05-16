@@ -1,0 +1,9 @@
+.CardItem-main {
+    position: relative;
+}
+
+.CardItem-fuel {
+    position: absolute;
+    top: 50%;
+    right: 3em;
+}
