@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import api from '../api';
 import Error from '../components/Error';
 import Loading from '../components/Loading';
+import Cars from '../components/Cars';
 
 class Home extends Component {
   constructor(props) {
@@ -10,8 +11,8 @@ class Home extends Component {
       loading: true,
       error: false,
       vehicles: {
-        mytaxi: [],
-        car2go: [],
+        taxis: [],
+        cars: [],
       },
     };
   }
@@ -26,19 +27,16 @@ class Home extends Component {
   }
 
   getVehicles() {
-    const myTaxiVehicles = api.getMyTaxiVehicles();
-    const car2GoVehicles = api.getCar2GoVehicles();
-
-    Promise.all([myTaxiVehicles, car2GoVehicles])
+    Promise.all([api.getTaxis(), api.getCars()])
       .then((data) => {
-        const [myTaxiData, car2GoData] = data;
+        const [taxiData, carsData] = data;
 
         if (this.isAlreadyMounted) {
           this.setState({
             loading: false,
             vehicles: {
-              mytaxi: myTaxiData.poiList,
-              car2go: car2GoData.placemarks,
+              taxis: taxiData.poiList,
+              cars: carsData.placemarks,
             },
           });
         }
@@ -52,7 +50,7 @@ class Home extends Component {
   }
 
   render() {
-    const { error, loading } = this.state;
+    const { error, loading, vehicles } = this.state;
 
     if (error) {
       return <Error />;
@@ -60,10 +58,7 @@ class Home extends Component {
       return <Loading />;
     }
 
-    console.log(this.state.vehicles.mytaxi);
-    console.log(this.state.vehicles.car2go);
-
-    return 'Home';
+    return <Cars data={vehicles.cars} />;
   }
 }
 

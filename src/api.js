@@ -18,7 +18,7 @@ const get = ({ path, type }) => {
 };
 
 const api = {
-  getMyTaxiVehicles: () => {
+  getTaxis: () => {
     const config = {
       path: MYTAXI,
       type: TYPE.VEHICLES,
@@ -27,7 +27,7 @@ const api = {
     return get(config);
   },
 
-  getCar2GoVehicles: () => {
+  getCars: () => {
     const config = {
       path: CAR2GO,
       type: TYPE.VEHICLES,
