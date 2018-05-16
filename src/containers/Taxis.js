@@ -1,4 +1,3 @@
-import Grid from '@material-ui/core/Grid';
 import React, { Component } from 'react';
 import api from '../api';
 import Error from '../components/Error';
@@ -51,13 +50,7 @@ class Taxis extends Component {
       return <Loading />;
     }
 
-    return (
-      <Grid container spacing={24}>
-        <Grid item xs={6}>
-          <TaxiList data={taxis} />
-        </Grid>
-      </Grid>
-    );
+    return <TaxiList data={taxis} />;
   }
 }
 

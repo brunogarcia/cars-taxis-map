@@ -17,7 +17,7 @@ const App = () => (
       <Navigation />
       <Switch>
         <Route exact path={PATH.CARS} component={Cars} />
-        <Route exact path={PATH.TAXIS} component={Taxis} />
+        <Route path={PATH.TAXIS} component={Taxis} />
         <Route path={PATH.MAP} component={MapList} />
       </Switch>
     </div>
