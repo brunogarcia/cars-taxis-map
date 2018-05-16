@@ -1,8 +1,10 @@
+import Grid from '@material-ui/core/Grid';
 import React, { Component } from 'react';
 import api from '../api';
 import Error from '../components/Error';
 import Loading from '../components/Loading';
 import Cars from '../components/Cars';
+import Taxis from '../components/Taxis';
 
 class Home extends Component {
   constructor(props) {
@@ -58,7 +60,16 @@ class Home extends Component {
       return <Loading />;
     }
 
-    return <Cars data={vehicles.cars} />;
+    return (
+      <Grid container spacing={24}>
+        <Grid item xs={6}>
+          <Cars data={vehicles.cars} />
+        </Grid>
+        <Grid item xs={6}>
+          <Taxis data={vehicles.taxis} />
+        </Grid>
+      </Grid>
+    );
   }
 }
 

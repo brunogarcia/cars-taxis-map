@@ -12,4 +12,14 @@ const car = shape({
   id: number.isRequired,
 });
 
-export default { car };
+const taxi = shape({
+  id: number.isRequired,
+  coordinate: shape({
+    latitude: number.isRequired,
+    longitude: number.isRequired,
+  }),
+  state: string.isRequired,
+  type: string.isRequired,
+});
+
+export default { car, taxi };
