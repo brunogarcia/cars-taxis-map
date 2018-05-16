@@ -26,24 +26,23 @@ class Home extends Component {
   }
 
   getVehicles() {
-    api.getMyTaxiVehicles()
-      .then((response) => {
-        if (!response.ok) {
-          throw Error(response.statusText);
-        }
-        return response.json();
-      })
+    const myTaxiVehicles = api.getMyTaxiVehicles();
+    const car2GoVehicles = api.getCar2GoVehicles();
+
+    Promise.all([myTaxiVehicles, car2GoVehicles])
       .then((data) => {
+        const [myTaxiData, car2GoData] = data;
+
         if (this.isAlreadyMounted) {
           this.setState({
-            vehicles: {
-              mytaxi: data.poiList,
-            },
             loading: false,
+            vehicles: {
+              mytaxi: myTaxiData.poiList,
+              car2go: car2GoData.placemarks,
+            },
           });
         }
-      })
-      .catch(() => {
+      }).catch(() => {
         if (this.isAlreadyMounted) {
           this.setState({
             error: true,
@@ -62,6 +61,7 @@ class Home extends Component {
     }
 
     console.log(this.state.vehicles.mytaxi);
+    console.log(this.state.vehicles.car2go);
 
     return 'Home';
   }

@@ -3,10 +3,18 @@ import CONSTANTS from './constants';
 const { HOST, PATH, TYPE } = CONSTANTS.API;
 const { MYTAXI, CAR2GO } = PATH;
 
+const checkResponse = (res) => {
+  if (!res.ok) {
+    throw Error(res.statusText);
+  }
+
+  return res.json();
+};
+
 const get = ({ path, type }) => {
   const config = `${HOST}/${path}/${type}`;
-  const myRequest = new Request(config);
-  return fetch(myRequest);
+  const req = new Request(config);
+  return fetch(req).then(res => checkResponse(res));
 };
 
 const api = {
