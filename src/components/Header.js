@@ -16,7 +16,7 @@ function Header() {
       <AppBar position="static" color="default">
         <Toolbar>
           <Typography variant="title" color="inherit">
-            Cars &amp; Taxis
+            Front-end Test
           </Typography>
         </Toolbar>
       </AppBar>

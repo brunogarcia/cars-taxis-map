@@ -1,15 +1,16 @@
 export default {
   APP: {
     PATH: {
-      HOME: '/',
+      CARS: '/',
+      TAXIS: '/taxis',
       MAP: '/map',
     },
   },
   API: {
     HOST: 'http://localhost:5000',
     PATH: {
-      CAR2GO: 'car2go',
-      MYTAXI: 'mytaxi',
+      CARS: 'car2go',
+      TAXIS: 'mytaxi',
     },
     TYPE: {
       VEHICLES: 'vehicles',

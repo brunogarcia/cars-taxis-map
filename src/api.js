@@ -1,7 +1,7 @@
 import CONSTANTS from './constants';
 
 const { HOST, PATH, TYPE } = CONSTANTS.API;
-const { MYTAXI, CAR2GO } = PATH;
+const { TAXIS, CARS } = PATH;
 
 const checkResponse = (res) => {
   if (!res.ok) {
@@ -20,7 +20,7 @@ const get = ({ path, type }) => {
 const api = {
   getTaxis: () => {
     const config = {
-      path: MYTAXI,
+      path: TAXIS,
       type: TYPE.VEHICLES,
     };
 
@@ -29,7 +29,7 @@ const api = {
 
   getCars: () => {
     const config = {
-      path: CAR2GO,
+      path: CARS,
       type: TYPE.VEHICLES,
     };
 

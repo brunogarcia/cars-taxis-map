@@ -4,22 +4,27 @@ import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 import Types from '../types';
 
-const Taxi = (props) => {
-  const { id, state, coordinate } = props.data;
+const CarItem = (props) => {
+  const {
+    name,
+    address,
+    fuel,
+    coordinates,
+  } = props.data;
 
   return (
     <div>
       <Card>
         <CardContent>
           <Typography variant="headline" component="h2">
-            {id}
+            {address}
           </Typography>
           <Typography color="textSecondary">
-            State: {state}
+            Plate: {name} / Fuel: {fuel}
           </Typography>
           <Typography color="textSecondary">
-            Latitude: {coordinate.latitude} <br />
-            Longitude: {coordinate.longitude}
+            Latitude: {coordinates[0]} <br />
+            Longitude: {coordinates[1]}
           </Typography>
         </CardContent>
       </Card>
@@ -27,8 +32,8 @@ const Taxi = (props) => {
   );
 };
 
-Taxi.propTypes = {
-  data: Types.taxi.isRequired,
+CarItem.propTypes = {
+  data: Types.car.isRequired,
 };
 
-export default Taxi;
+export default CarItem;

@@ -3,19 +3,15 @@ import React, { Component } from 'react';
 import api from '../api';
 import Error from '../components/Error';
 import Loading from '../components/Loading';
-import Cars from '../components/Cars';
-import Taxis from '../components/Taxis';
+import CarList from '../components/CarList';
 
-class Home extends Component {
+class Cars extends Component {
   constructor(props) {
     super(props);
     this.state = {
       loading: true,
       error: false,
-      vehicles: {
-        taxis: [],
-        cars: [],
-      },
+      cars: [],
     };
   }
 
@@ -29,17 +25,12 @@ class Home extends Component {
   }
 
   getVehicles() {
-    Promise.all([api.getTaxis(), api.getCars()])
+    api.getCars()
       .then((data) => {
-        const [taxiData, carsData] = data;
-
         if (this.isAlreadyMounted) {
           this.setState({
             loading: false,
-            vehicles: {
-              taxis: taxiData.poiList,
-              cars: carsData.placemarks,
-            },
+            cars: data.placemarks,
           });
         }
       }).catch(() => {
@@ -52,7 +43,7 @@ class Home extends Component {
   }
 
   render() {
-    const { error, loading, vehicles } = this.state;
+    const { error, loading, cars } = this.state;
 
     if (error) {
       return <Error />;
@@ -63,14 +54,11 @@ class Home extends Component {
     return (
       <Grid container spacing={24}>
         <Grid item xs={6}>
-          <Cars data={vehicles.cars} />
-        </Grid>
-        <Grid item xs={6}>
-          <Taxis data={vehicles.taxis} />
+          <CarList data={cars} />
         </Grid>
       </Grid>
     );
   }
 }
 
-export default Home;
+export default Cars;
