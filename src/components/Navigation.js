@@ -9,7 +9,7 @@ import TaxiIcon from '@material-ui/icons/LocalTaxi';
 import MapIcon from '@material-ui/icons/Map';
 import constants from '../constants';
 
-const { CARS, TAXIS, MAP } = constants.APP.PATH;
+const PATHS = Object.values(constants.APP.PATH);
 
 const styles = {
   root: {
@@ -18,8 +18,7 @@ const styles = {
 };
 
 const changePath = ({ value, history }) => {
-  const paths = [CARS, TAXIS, MAP];
-  history.push(paths[value]);
+  history.push(PATHS[value]);
 };
 
 class Navigation extends Component {
@@ -32,11 +31,24 @@ class Navigation extends Component {
     this.handleChange = this.handleChange.bind(this);
   }
 
+  componentDidMount() {
+    this.updateActiveNavigation();
+  }
+
   handleChange(event, value) {
     changePath({
       value,
       history: this.props.history,
     });
+
+    this.setState({
+      value,
+    });
+  }
+
+  updateActiveNavigation() {
+    const { pathname } = this.props.location;
+    const value = PATHS.indexOf(pathname);
 
     this.setState({
       value,
@@ -63,6 +75,9 @@ class Navigation extends Component {
 Navigation.propTypes = {
   history: PropTypes.shape({
     push: PropTypes.func.isRequired,
+  }).isRequired,
+  location: PropTypes.shape({
+    pathname: PropTypes.string,
   }).isRequired,
 };
 
