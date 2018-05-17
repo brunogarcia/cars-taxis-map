@@ -1,29 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Leaflet from 'leaflet';
 import { Marker, Popup } from 'react-leaflet';
-import TaxiIcon from '../taxi.png';
-import CarIcon from '../car.png';
+import MapMarkerIcon from './MapMarkerIcon';
 import Types from '../types';
-import CONSTANTS from '../constants';
-
-const { TAXI } = CONSTANTS.TYPES;
-
-const taxiIcon = Leaflet.icon({
-  iconUrl: TaxiIcon,
-});
-
-const carIcon = Leaflet.icon({
-  iconUrl: CarIcon,
-});
-
-const getIcon = (type) => {
-  if (type === TAXI) {
-    return taxiIcon;
-  }
-
-  return carIcon;
-};
 
 const MapMarker = (props) => {
   const {
@@ -36,7 +15,10 @@ const MapMarker = (props) => {
   const position = [coordinates.lat, coordinates.lng];
 
   return (
-    <Marker icon={getIcon(type)} position={position}>
+    <Marker
+      position={position}
+      icon={MapMarkerIcon.getIcon(type)}
+    >
       <Popup>
         <span>
           {title}
