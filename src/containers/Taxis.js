@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import api from '../api';
+import api from '../api/';
 import Error from '../components/Error';
 import Loading from '../components/Loading';
 import TaxiList from '../components/TaxiList';
