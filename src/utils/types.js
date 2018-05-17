@@ -24,8 +24,10 @@ const taxi = shape({
 
 const marker = shape({
   id: number.isRequired,
-  title: string,
+  address: string,
   state: string,
+  fuel: number,
+  plate: string,
   type: string.isRequired,
   coordinates: shape({
     lng: number.isRequired,

@@ -6,9 +6,11 @@ const isTaxiType = type => type === TAXI;
 
 const taxiObject = item => ({
   id: item.id,
-  title: '',
+  address: null,
   state: item.state,
   type: TAXI,
+  fuel: null,
+  plate: null,
   coordinates: {
     lng: item.coordinate.longitude,
     lat: item.coordinate.latitude,
@@ -17,9 +19,11 @@ const taxiObject = item => ({
 
 const carObject = item => ({
   id: item.id,
-  title: item.address,
-  state: '',
+  address: item.address,
+  state: null,
   type: CAR,
+  fuel: item.fuel,
+  plate: item.name,
   coordinates: {
     lng: item.coordinates[0],
     lat: item.coordinates[1],
