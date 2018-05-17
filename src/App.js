@@ -5,6 +5,7 @@ import Navigation from './components/Navigation';
 import Cars from './containers/Cars';
 import Taxis from './containers/Taxis';
 import MapList from './containers/MapList';
+import NoMatch from './components/NoMatch';
 import CONSTANTS from './constants';
 import './App.css';
 
@@ -19,6 +20,7 @@ const App = () => (
         <Route exact path={PATH.CARS} component={Cars} />
         <Route path={PATH.TAXIS} component={Taxis} />
         <Route path={PATH.MAP} component={MapList} />
+        <Route component={NoMatch} />
       </Switch>
     </div>
   </Router>
