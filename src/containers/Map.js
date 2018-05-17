@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 import api from '../api';
 import Error from '../components/Error';
 import Loading from '../components/Loading';
+import MapWrapper from '../components/MapWrapper';
 
-class MapList extends Component {
+class Map extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -33,8 +34,8 @@ class MapList extends Component {
           this.setState({
             loading: false,
             vehicles: {
-              cars,
-              taxis,
+              cars: cars.placemarks,
+              taxis: taxis.poiList,
             },
           });
         }
@@ -48,7 +49,11 @@ class MapList extends Component {
   }
 
   render() {
-    const { error, loading, vehicles } = this.state;
+    const {
+      error,
+      loading,
+      vehicles,
+    } = this.state;
 
     if (error) {
       return <Error />;
@@ -56,10 +61,8 @@ class MapList extends Component {
       return <Loading />;
     }
 
-    console.log(vehicles);
-
-    return 'map list';
+    return <MapWrapper data={vehicles} />;
   }
 }
 
-export default MapList;
+export default Map;

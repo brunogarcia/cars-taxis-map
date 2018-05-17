@@ -16,4 +16,8 @@ export default {
       VEHICLES: 'vehicles',
     },
   },
+  TYPES: {
+    TAXI: 'TAXI',
+    CAR: 'CAR',
+  },
 };
