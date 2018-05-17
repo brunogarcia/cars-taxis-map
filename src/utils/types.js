@@ -22,4 +22,15 @@ const taxi = shape({
   type: string.isRequired,
 });
 
-export default { car, taxi };
+const marker = shape({
+  id: number.isRequired,
+  title: string,
+  state: string,
+  type: string.isRequired,
+  coordinates: shape({
+    lng: number.isRequired,
+    lat: number.isRequired,
+  }),
+});
+
+export default { car, taxi, marker };

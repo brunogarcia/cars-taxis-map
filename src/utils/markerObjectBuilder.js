@@ -4,7 +4,7 @@ const { CAR, TAXI } = CONSTANTS.TYPES;
 
 const isTaxiType = type => type === TAXI;
 
-const taxiMarker = item => ({
+const taxiObject = item => ({
   id: item.id,
   title: '',
   state: item.state,
@@ -15,7 +15,7 @@ const taxiMarker = item => ({
   },
 });
 
-const carMarker = item => ({
+const carObject = item => ({
   id: item.id,
   title: item.address,
   state: '',
@@ -26,10 +26,10 @@ const carMarker = item => ({
   },
 });
 
-const getMarker = data =>
+const createObjects = data =>
   data.map((item) => {
     const { type } = item;
-    return isTaxiType(type) ? taxiMarker(item) : carMarker(item);
+    return isTaxiType(type) ? taxiObject(item) : carObject(item);
   });
 
-export default { getMarker };
+export default { createObjects };

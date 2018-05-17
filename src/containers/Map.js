@@ -3,6 +3,7 @@ import api from '../api/';
 import Error from '../components/Error';
 import Loading from '../components/Loading';
 import MapWrapper from '../components/MapWrapper';
+import markerObjectBuilder from '../utils/markerObjectBuilder';
 
 class Map extends Component {
   constructor(props) {
@@ -34,8 +35,8 @@ class Map extends Component {
           this.setState({
             loading: false,
             vehicles: {
-              cars: cars.placemarks,
-              taxis: taxis.poiList,
+              cars: markerObjectBuilder.createObjects(cars.placemarks),
+              taxis: markerObjectBuilder.createObjects(taxis.poiList),
             },
           });
         }

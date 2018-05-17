@@ -4,7 +4,6 @@ import { Map, TileLayer } from 'react-leaflet';
 import MarkerClusterGroup from 'react-leaflet-markercluster';
 import MapMarker from './MapMarker';
 import Types from '../utils/types';
-import markerBuilder from '../utils/markerBuilder';
 
 const map = {
   lat: 53.5511,
@@ -22,8 +21,6 @@ const renderMapMarkers = vehicles =>
 
 const MapWrapper = (props) => {
   const { cars, taxis } = props.data;
-  const carMarkerObjects = markerBuilder.getMarker(cars);
-  const taxiMarkerObjects = markerBuilder.getMarker(taxis);
 
   return (
     <Map center={position} zoom={map.zoom} maxZoom={map.maxZoom}>
@@ -32,8 +29,8 @@ const MapWrapper = (props) => {
         attribution={map.attribution}
       />
       <MarkerClusterGroup>
-        {renderMapMarkers(carMarkerObjects)}
-        {renderMapMarkers(taxiMarkerObjects)}
+        {renderMapMarkers(cars)}
+        {renderMapMarkers(taxis)}
       </MarkerClusterGroup>
     </Map>
   );
@@ -41,8 +38,8 @@ const MapWrapper = (props) => {
 
 MapWrapper.propTypes = {
   data: PropTypes.shape({
-    cars: PropTypes.arrayOf(Types.car.isRequired).isRequired,
-    taxis: PropTypes.arrayOf(Types.taxi.isRequired).isRequired,
+    cars: PropTypes.arrayOf(Types.marker.isRequired).isRequired,
+    taxis: PropTypes.arrayOf(Types.marker.isRequired).isRequired,
   }).isRequired,
 };
 
