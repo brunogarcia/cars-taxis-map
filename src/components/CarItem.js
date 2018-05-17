@@ -2,8 +2,7 @@ import React from 'react';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
-import GasIcon from '@material-ui/icons/LocalGasStation';
-import Badge from '@material-ui/core/Badge';
+import Battery from './Battery';
 import Types from '../types';
 import './CardItem.css';
 
@@ -23,9 +22,7 @@ const CarItem = (props) => {
             {address}
           </Typography>
           <div className="CardItem-fuel">
-            <Badge badgeContent={fuel} color="primary">
-              <GasIcon />
-            </Badge>
+            <Battery energy={fuel} />
           </div>
           <Typography color="textSecondary">
             Plate: {name}

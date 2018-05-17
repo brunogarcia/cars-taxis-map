@@ -5,7 +5,7 @@ import Typography from '@material-ui/core/Typography';
 import CheckIcon from '@material-ui/icons/Check';
 import OffIcon from '@material-ui/icons/HighlightOff';
 import Types from '../types';
-import './TaxiItem.css'
+import './TaxiItem.css';
 
 const ACTIVE = 'ACTIVE';
 
@@ -13,10 +13,10 @@ const isActive = state => state === ACTIVE;
 
 const getStateIcon = (state) => {
   if (isActive(state)) {
-    return <CheckIcon />;
+    return <CheckIcon color="primary" />;
   }
 
-  return <OffIcon className="TaxiItem-alert" />;
+  return <OffIcon color="error" />;
 };
 
 const TaxiItem = (props) => {
