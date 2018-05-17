@@ -1,6 +1,6 @@
 import Leaflet from 'leaflet';
-import TaxiIcon from '../taxi.png';
-import CarIcon from '../car.png';
+import TaxiIcon from '../assets/taxi.png';
+import CarIcon from '../assets/car.png';
 import CONSTANTS from '../constants';
 
 const { TAXI } = CONSTANTS.TYPES;
