@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import TaxiItem from './TaxiItem';
-import Types from '../types';
+import Types from '../utils/types';
 
 const TaxiList = props => props.data.map(item => <TaxiItem key={item.id} data={item} />);
 

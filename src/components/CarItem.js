@@ -3,7 +3,7 @@ import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 import Battery from './Battery';
-import Types from '../types';
+import Types from '../utils/types';
 import './CardItem.css';
 
 const CarItem = (props) => {

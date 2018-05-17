@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Map, TileLayer } from 'react-leaflet';
 import MapMarker from './MapMarker';
-import Types from '../types';
+import Types from '../utils/types';
 import markerBuilder from '../utils/markerBuilder';
 
 const map = {

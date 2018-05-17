@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Marker, Popup } from 'react-leaflet';
 import markerIcon from '../utils/markerIcon';
-import Types from '../types';
+import Types from '../utils/types';
 
 const MapMarker = (props) => {
   const {

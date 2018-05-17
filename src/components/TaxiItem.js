@@ -4,7 +4,7 @@ import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 import CheckIcon from '@material-ui/icons/Check';
 import OffIcon from '@material-ui/icons/HighlightOff';
-import Types from '../types';
+import Types from '../utils/types';
 import './TaxiItem.css';
 
 const ACTIVE = 'ACTIVE';
