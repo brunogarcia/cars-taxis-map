@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Map, TileLayer } from 'react-leaflet';
 import MapMarker from './MapMarker';
 import Types from '../types';
-import utils from '../utils';
+import markerBuilder from '../utils/markerBuilder';
 
 const map = {
   lat: 53.5511,
@@ -20,8 +20,8 @@ const renderMapMarkers = vehicles =>
 
 const MapWrapper = (props) => {
   const { cars, taxis } = props.data;
-  const carMarkerObjects = utils.markerBuilder(cars);
-  const taxiMarkerObjects = utils.markerBuilder(taxis);
+  const carMarkerObjects = markerBuilder.getMarker(cars);
+  const taxiMarkerObjects = markerBuilder.getMarker(taxis);
 
   return (
     <Map center={position} zoom={map.zoom}>

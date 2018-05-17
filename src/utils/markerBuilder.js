@@ -1,6 +1,8 @@
-import CONSTANTS from './constants';
+import CONSTANTS from '../constants';
 
 const { CAR, TAXI } = CONSTANTS.TYPES;
+
+const isTaxiType = type => type === TAXI;
 
 const taxiMarker = item => ({
   id: item.id,
@@ -24,12 +26,10 @@ const carMarker = item => ({
   },
 });
 
-const isTaxiType = type => type === TAXI;
-
-const markerBuilder = data =>
+const getMarker = data =>
   data.map((item) => {
     const { type } = item;
     return isTaxiType(type) ? taxiMarker(item) : carMarker(item);
   });
 
-export default { markerBuilder };
+export default { getMarker };

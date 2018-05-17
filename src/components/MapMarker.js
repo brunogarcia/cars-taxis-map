@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Marker, Popup } from 'react-leaflet';
-import MapMarkerIcon from './MapMarkerIcon';
+import markerIcon from '../utils/markerIcon';
 import Types from '../types';
 
 const MapMarker = (props) => {
@@ -17,7 +17,7 @@ const MapMarker = (props) => {
   return (
     <Marker
       position={position}
-      icon={MapMarkerIcon.getIcon(type)}
+      icon={markerIcon.getIcon(type)}
     >
       <Popup>
         <span>
