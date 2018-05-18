@@ -1,14 +1,19 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import AlertIcon from '@material-ui/icons/Announcement';
-import './Error.css';
+import Typography from '@material-ui/core/Typography';
 
 const Error = () => {
   const message = 'Looks like there was a problem';
 
   return (
-    <div className="Error-main">
-      <p>{message} <AlertIcon /></p>
-    </div>
+    <Fragment>
+      <Typography variant="headline" component="h3">
+        <AlertIcon /> Error
+      </Typography>
+      <Typography componentnt="p">
+        <em>{message}</em>
+      </Typography>
+    </Fragment>
   );
 };
 

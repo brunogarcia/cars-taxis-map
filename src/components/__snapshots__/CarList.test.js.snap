@@ -1,120 +1,138 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders correctly 1`] = `
-Array [
-  <div
-    className="MuiPaper-root-2 MuiPaper-elevation2-6 MuiPaper-rounded-3 MuiCard-root-1 CardItem-main"
+<div
+  style={
+    Object {
+      "padding": 20,
+    }
+  }
 >
+  <div
+    className="MuiGrid-container-1 MuiGrid-spacing-xs-24-24"
+  >
     <div
-        className="MuiCardContent-root-29"
+      className="MuiGrid-item-2 MuiGrid-grid-xs-12-39 MuiGrid-grid-md-6-59 MuiGrid-grid-lg-4-70 MuiGrid-grid-xl-3-82"
     >
-        <h2
-            className="MuiTypography-root-30 MuiTypography-headline-35"
-        >
-            test 1
-        </h2>
+      <div
+        className="MuiPaper-root-93 MuiPaper-elevation2-97 MuiPaper-rounded-94 MuiCard-root-92 CardItem-main"
+      >
         <div
+          className="MuiCardContent-root-120"
+        >
+          <h3
+            className="MuiTypography-root-121 MuiTypography-subheading-128"
+          >
+            test 1
+          </h3>
+          <div
             className="CardItem-fuel"
-        >
+          >
             <span
-                className="MuiBadge-root-54"
+              className="MuiBadge-root-145"
             >
-                <svg
-                    aria-hidden="true"
-                    className="MuiSvgIcon-root-59 Battery-full"
-                    color={undefined}
-                    focusable="false"
-                    viewBox="0 0 24 24"
-                >
-                    <g>
-                        <path
-                            d="M15.67 4H14V2h-4v2H8.33C7.6 4 7 4.6 7 5.33v15.33C7 21.4 7.6 22 8.33 22h7.33c.74 0 1.34-.6 1.34-1.33V5.33C17 4.6 16.4 4 15.67 4zM11 20v-5.5H9L13 7v5.5h2L11 20z"
-                        />
-                    </g>
-                </svg>
-                <span
-                    className="MuiBadge-badge-55 MuiBadge-colorPrimary-56"
-                >
-                    99
-                </span>
+              <svg
+                aria-hidden="true"
+                className="MuiSvgIcon-root-150 Battery-full"
+                color={undefined}
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <g>
+                  <path
+                    d="M15.67 4H14V2h-4v2H8.33C7.6 4 7 4.6 7 5.33v15.33C7 21.4 7.6 22 8.33 22h7.33c.74 0 1.34-.6 1.34-1.33V5.33C17 4.6 16.4 4 15.67 4zM11 20v-5.5H9L13 7v5.5h2L11 20z"
+                  />
+                </g>
+              </svg>
+              <span
+                className="MuiBadge-badge-146 MuiBadge-colorPrimary-147"
+              >
+                99
+              </span>
             </span>
-        </div>
-        <p
-            className="MuiTypography-root-30 MuiTypography-body1-39 MuiTypography-colorTextSecondary-52"
-        >
+          </div>
+          <p
+            className="MuiTypography-root-121 MuiTypography-body1-130 MuiTypography-colorTextSecondary-143"
+          >
             Plate: 
             test
-        </p>
-        <p
-            className="MuiTypography-root-30 MuiTypography-body1-39 MuiTypography-colorTextSecondary-52"
-        >
+          </p>
+          <p
+            className="MuiTypography-root-121 MuiTypography-body1-130 MuiTypography-colorTextSecondary-143"
+          >
             Latitude: 
             24
              
             <br />
             Longitude: 
             81
-        </p>
-    </div>
-</div>,
-  <div
-    className="MuiPaper-root-2 MuiPaper-elevation2-6 MuiPaper-rounded-3 MuiCard-root-1 CardItem-main"
->
-    <div
-        className="MuiCardContent-root-29"
-    >
-        <h2
-            className="MuiTypography-root-30 MuiTypography-headline-35"
-        >
-            test 2
-        </h2>
-        <div
-            className="CardItem-fuel"
-        >
-            <span
-                className="MuiBadge-root-54"
-            >
-                <svg
-                    aria-hidden="true"
-                    className="MuiSvgIcon-root-59"
-                    color={undefined}
-                    focusable="false"
-                    viewBox="0 0 24 24"
-                >
-                    <g>
-                        <path
-                            d="M14.47 13.5L11 20v-5.5H9l.53-1H7v7.17C7 21.4 7.6 22 8.33 22h7.33c.74 0 1.34-.6 1.34-1.33V13.5h-2.53z"
-                        />
-                        <path
-                            d="M15.67 4H14V2h-4v2H8.33C7.6 4 7 4.6 7 5.33v8.17h2.53L13 7v5.5h2l-.53 1H17V5.33C17 4.6 16.4 4 15.67 4z"
-                            fillOpacity=".3"
-                        />
-                    </g>
-                </svg>
-                <span
-                    className="MuiBadge-badge-55 MuiBadge-colorPrimary-56"
-                >
-                    32
-                </span>
-            </span>
+          </p>
         </div>
-        <p
-            className="MuiTypography-root-30 MuiTypography-body1-39 MuiTypography-colorTextSecondary-52"
+      </div>
+    </div>
+    <div
+      className="MuiGrid-item-2 MuiGrid-grid-xs-12-39 MuiGrid-grid-md-6-59 MuiGrid-grid-lg-4-70 MuiGrid-grid-xl-3-82"
+    >
+      <div
+        className="MuiPaper-root-93 MuiPaper-elevation2-97 MuiPaper-rounded-94 MuiCard-root-92 CardItem-main"
+      >
+        <div
+          className="MuiCardContent-root-120"
         >
+          <h3
+            className="MuiTypography-root-121 MuiTypography-subheading-128"
+          >
+            test 2
+          </h3>
+          <div
+            className="CardItem-fuel"
+          >
+            <span
+              className="MuiBadge-root-145"
+            >
+              <svg
+                aria-hidden="true"
+                className="MuiSvgIcon-root-150"
+                color={undefined}
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <g>
+                  <path
+                    d="M14.47 13.5L11 20v-5.5H9l.53-1H7v7.17C7 21.4 7.6 22 8.33 22h7.33c.74 0 1.34-.6 1.34-1.33V13.5h-2.53z"
+                  />
+                  <path
+                    d="M15.67 4H14V2h-4v2H8.33C7.6 4 7 4.6 7 5.33v8.17h2.53L13 7v5.5h2l-.53 1H17V5.33C17 4.6 16.4 4 15.67 4z"
+                    fillOpacity=".3"
+                  />
+                </g>
+              </svg>
+              <span
+                className="MuiBadge-badge-146 MuiBadge-colorPrimary-147"
+              >
+                32
+              </span>
+            </span>
+          </div>
+          <p
+            className="MuiTypography-root-121 MuiTypography-body1-130 MuiTypography-colorTextSecondary-143"
+          >
             Plate: 
             test
-        </p>
-        <p
-            className="MuiTypography-root-30 MuiTypography-body1-39 MuiTypography-colorTextSecondary-52"
-        >
+          </p>
+          <p
+            className="MuiTypography-root-121 MuiTypography-body1-130 MuiTypography-colorTextSecondary-143"
+          >
             Latitude: 
             41
              
             <br />
             Longitude: 
             41
-        </p>
+          </p>
+        </div>
+      </div>
     </div>
-</div>,
-]
+  </div>
+</div>
 `;
