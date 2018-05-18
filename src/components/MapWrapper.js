@@ -16,11 +16,8 @@ const map = {
 
 const position = [map.lat, map.lng];
 
-const renderMapMarkers = vehicles =>
-  vehicles.map(vehicle => <MapMarker key={vehicle.id} data={vehicle} />);
-
 const MapWrapper = (props) => {
-  const { cars, taxis } = props.data;
+  const vehicles = Object.values(props.data);
 
   return (
     <Map center={position} zoom={map.zoom} maxZoom={map.maxZoom}>
@@ -29,18 +26,14 @@ const MapWrapper = (props) => {
         attribution={map.attribution}
       />
       <MarkerClusterGroup>
-        {renderMapMarkers(cars)}
-        {renderMapMarkers(taxis)}
+        {vehicles.map(vehicle => <MapMarker key={vehicle.id} data={vehicle} />)}
       </MarkerClusterGroup>
     </Map>
   );
 };
 
 MapWrapper.propTypes = {
-  data: PropTypes.shape({
-    cars: PropTypes.arrayOf(Types.marker.isRequired).isRequired,
-    taxis: PropTypes.arrayOf(Types.marker.isRequired).isRequired,
-  }).isRequired,
+  data: PropTypes.shape(Types.marker.isRequired).isRequired,
 };
 
 export default MapWrapper;

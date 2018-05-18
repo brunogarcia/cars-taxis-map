@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div>
+  <header
+    className="MuiPaper-root-10 MuiPaper-elevation4-16 MuiAppBar-root-2 MuiAppBar-positionStatic-6 MuiAppBar-colorDefault-7 Header-main"
+  >
+    <div
+      className="MuiToolbar-root-37 MuiToolbar-gutters-38"
+    >
+      <h3
+        className="MuiTypography-root-39 MuiTypography-subheading-46"
+      >
+        A Front-end test by 
+        <a
+          href="http://blog.garciaechegaray.com/about-me/"
+        >
+          Bruno Garcia
+        </a>
+      </h3>
+    </div>
+  </header>
+</div>
+`;

@@ -11,10 +11,7 @@ class Map extends Component {
     this.state = {
       loading: true,
       error: false,
-      vehicles: {
-        cars: [],
-        taxis: [],
-      },
+      vehicles: {},
     };
   }
 
@@ -35,8 +32,8 @@ class Map extends Component {
           this.setState({
             loading: false,
             vehicles: {
-              cars: markerObjectBuilder.createObjects(cars.placemarks),
-              taxis: markerObjectBuilder.createObjects(taxis.poiList),
+              ...markerObjectBuilder.createObjects(cars.placemarks),
+              ...markerObjectBuilder.createObjects(taxis.poiList),
             },
           });
         }
