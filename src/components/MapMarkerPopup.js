@@ -1,15 +1,15 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { Popup } from 'react-leaflet';
 import Typography from '@material-ui/core/Typography';
 import Types from '../utils/types';
 import Battery from './Battery';
-import stateIcon from '../utils/stateIcon';
+import TaxiState from './TaxiState';
 
 const getBattery = (fuel) => {
   if (fuel) {
     return (
       <Typography color="textSecondary">
-        <Battery energy={fuel} />
+        Car battery charge at <Battery energy={fuel} />
       </Typography>
     );
   }
@@ -21,7 +21,7 @@ const getState = (state) => {
   if (state) {
     return (
       <Typography color="textSecondary">
-        I am {stateIcon.getIcon(state)}
+        <TaxiState state={state} />
       </Typography>
     );
   }
@@ -38,8 +38,8 @@ const MapMarkerPopup = (props) => {
   } = props.data;
 
   return (
-    <Popup>
-      <span>
+    <Popup closeButton={false}>
+      <Fragment>
         <Typography variant="title">
           {plate}
         </Typography>
@@ -48,7 +48,7 @@ const MapMarkerPopup = (props) => {
         </Typography>
         {getBattery(fuel)}
         {getState(state)}
-      </span>
+      </Fragment>
     </Popup>
   );
 };

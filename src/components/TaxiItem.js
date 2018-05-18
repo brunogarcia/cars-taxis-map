@@ -4,7 +4,7 @@ import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 import Types from '../utils/types';
 import './TaxiItem.css';
-import stateIcon from '../utils/stateIcon';
+import TaxiState from './TaxiState';
 
 const TaxiItem = (props) => {
   const { id, state, coordinate } = props.data;
@@ -13,12 +13,14 @@ const TaxiItem = (props) => {
     <div>
       <Card>
         <CardContent>
-          <Typography variant="headline" component="h2">
+          <Typography variant="title" component="h2">
             {id}
           </Typography>
+
           <Typography color="textSecondary">
-            State: {stateIcon.getIcon(state)}
+            <TaxiState state={state} />
           </Typography>
+          
           <Typography color="textSecondary">
             Latitude: {coordinate.latitude} <br />
             Longitude: {coordinate.longitude}

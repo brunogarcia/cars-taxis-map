@@ -1,3 +1,8 @@
+/* A map's markers expect to receive the same object structure,
+ * so it needed to create a special one for cars and taxis
+ * regardless of received structure from API.
+ */
+
 import CONSTANTS from '../constants';
 
 const { CAR, TAXI } = CONSTANTS.TYPES;

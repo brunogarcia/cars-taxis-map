@@ -20,4 +20,8 @@ export default {
     TAXI: 'TAXI',
     CAR: 'CAR',
   },
+  STATE: {
+    ACTIVE: 'ACTIVE',
+    INACTIVE: 'ACTIVE',
+  },
 };
