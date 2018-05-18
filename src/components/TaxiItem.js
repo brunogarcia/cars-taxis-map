@@ -5,7 +5,6 @@ import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import Types from '../utils/types';
 import TaxiState from './TaxiState';
-import './TaxiItem.css';
 
 const TaxiItem = (props) => {
   const { id, state, coordinate } = props.data;

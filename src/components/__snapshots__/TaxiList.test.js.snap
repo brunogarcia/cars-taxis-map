@@ -1,0 +1,106 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  style={
+    Object {
+      "padding": 20,
+    }
+  }
+>
+  <div
+    className="MuiGrid-container-1 MuiGrid-spacing-xs-24-24"
+  >
+    <div
+      className="MuiGrid-item-2 MuiGrid-grid-xs-12-39 MuiGrid-grid-md-6-59 MuiGrid-grid-lg-4-70 MuiGrid-grid-xl-3-82"
+    >
+      <div
+        className="MuiPaper-root-93 MuiPaper-elevation2-97 MuiPaper-rounded-94 MuiCard-root-92"
+      >
+        <div
+          className="MuiCardContent-root-120"
+        >
+          <h2
+            className="MuiTypography-root-121 MuiTypography-title-127"
+          >
+            12345
+          </h2>
+          <p
+            className="MuiTypography-root-121 MuiTypography-body1-130 MuiTypography-colorTextSecondary-143"
+          >
+            This taxi is not available
+            <svg
+              aria-hidden="true"
+              className="MuiSvgIcon-root-145 MuiSvgIcon-colorError-149"
+              color={undefined}
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <g>
+                <path
+                  d="M14.59 8L12 10.59 9.41 8 8 9.41 10.59 12 8 14.59 9.41 16 12 13.41 14.59 16 16 14.59 13.41 12 16 9.41 14.59 8zM12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"
+                />
+              </g>
+            </svg>
+          </p>
+          <p
+            className="MuiTypography-root-121 MuiTypography-body1-130 MuiTypography-colorTextSecondary-143"
+          >
+            Latitude: 
+            41
+             
+            <br />
+            Longitude: 
+            52
+          </p>
+        </div>
+      </div>
+    </div>
+    <div
+      className="MuiGrid-item-2 MuiGrid-grid-xs-12-39 MuiGrid-grid-md-6-59 MuiGrid-grid-lg-4-70 MuiGrid-grid-xl-3-82"
+    >
+      <div
+        className="MuiPaper-root-93 MuiPaper-elevation2-97 MuiPaper-rounded-94 MuiCard-root-92"
+      >
+        <div
+          className="MuiCardContent-root-120"
+        >
+          <h2
+            className="MuiTypography-root-121 MuiTypography-title-127"
+          >
+            56789
+          </h2>
+          <p
+            className="MuiTypography-root-121 MuiTypography-body1-130 MuiTypography-colorTextSecondary-143"
+          >
+            This taxi is not available
+            <svg
+              aria-hidden="true"
+              className="MuiSvgIcon-root-145 MuiSvgIcon-colorError-149"
+              color={undefined}
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <g>
+                <path
+                  d="M14.59 8L12 10.59 9.41 8 8 9.41 10.59 12 8 14.59 9.41 16 12 13.41 14.59 16 16 14.59 13.41 12 16 9.41 14.59 8zM12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"
+                />
+              </g>
+            </svg>
+          </p>
+          <p
+            className="MuiTypography-root-121 MuiTypography-body1-130 MuiTypography-colorTextSecondary-143"
+          >
+            Latitude: 
+            33
+             
+            <br />
+            Longitude: 
+            82
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
