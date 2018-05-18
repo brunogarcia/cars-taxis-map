@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
@@ -15,7 +15,7 @@ const CarItem = (props) => {
   } = props.data;
 
   return (
-    <div>
+    <Fragment>
       <Card className="CardItem-main">
         <CardContent>
           <Typography variant="headline" component="h2">
@@ -33,7 +33,7 @@ const CarItem = (props) => {
           </Typography>
         </CardContent>
       </Card>
-    </div>
+    </Fragment>
   );
 };
 
