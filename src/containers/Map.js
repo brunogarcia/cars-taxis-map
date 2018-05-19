@@ -11,7 +11,7 @@ class Map extends Component {
     this.state = {
       loading: true,
       error: false,
-      vehicles: {},
+      markers: [],
     };
   }
 
@@ -31,10 +31,10 @@ class Map extends Component {
         if (this.isAlreadyMounted) {
           this.setState({
             loading: false,
-            vehicles: {
+            markers: [
               ...markerObjectBuilder.createObjects(cars.placemarks),
               ...markerObjectBuilder.createObjects(taxis.poiList),
-            },
+            ],
           });
         }
       }).catch(() => {
@@ -50,7 +50,7 @@ class Map extends Component {
     const {
       error,
       loading,
-      vehicles,
+      markers,
     } = this.state;
 
     if (error) {
@@ -59,7 +59,7 @@ class Map extends Component {
       return <Loading />;
     }
 
-    return <MapWrapper data={vehicles} />;
+    return <MapWrapper data={markers} />;
   }
 }
 

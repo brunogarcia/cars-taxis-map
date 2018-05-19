@@ -5,8 +5,8 @@ import Loading from '../components/Loading';
 import Error from '../components/Error';
 import MapWrapper from '../components/MapWrapper';
 
-const vehicles = {
-  0: {
+const markers = [
+  {
     id: 123,
     address: 'test',
     state: 'ACTIVE',
@@ -18,7 +18,7 @@ const vehicles = {
       lat: 52,
     },
   },
-  1: {
+  {
     id: 456,
     address: 'test',
     state: 'ACTIVE',
@@ -30,9 +30,9 @@ const vehicles = {
       lat: 56,
     },
   },
-};
+];
 
-describe('Cars component', () => {
+describe('Map component', () => {
   it('renders differently with default state', () => {
     const wrapper = shallow(<Map />);
     expect(wrapper.find(Loading).exists()).toBeTruthy();
@@ -40,13 +40,13 @@ describe('Cars component', () => {
 
   it('renders differently with some error', () => {
     const wrapper = shallow(<Map />);
-    wrapper.setState({ loading: false, error: true, vehicles: {} });
+    wrapper.setState({ loading: false, error: true, markers: {} });
     expect(wrapper.find(Error).exists()).toBeTruthy();
   });
 
-  it('renders differently with vehicles', () => {
+  it('renders differently with markers', () => {
     const wrapper = shallow(<Map />);
-    wrapper.setState({ loading: false, error: false, vehicles });
+    wrapper.setState({ loading: false, error: false, markers });
     expect(wrapper.find(MapWrapper).exists()).toBeTruthy();
   });
 

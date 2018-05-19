@@ -26,7 +26,7 @@ const taxis = [
   },
 ];
 
-describe('Cars component', () => {
+describe('Taxis component', () => {
   it('renders differently with default state', () => {
     const wrapper = shallow(<Taxis />);
     expect(wrapper.find(Loading).exists()).toBeTruthy();

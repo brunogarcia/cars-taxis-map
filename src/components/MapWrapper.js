@@ -16,24 +16,20 @@ const map = {
 
 const position = [map.lat, map.lng];
 
-const MapWrapper = (props) => {
-  const vehicles = Object.values(props.data);
-
-  return (
-    <Map center={position} zoom={map.zoom} maxZoom={map.maxZoom}>
-      <TileLayer
-        url={map.url}
-        attribution={map.attribution}
-      />
-      <MarkerClusterGroup>
-        {vehicles.map(vehicle => <MapMarker key={vehicle.id} data={vehicle} />)}
-      </MarkerClusterGroup>
-    </Map>
-  );
-};
+const MapWrapper = props => (
+  <Map center={position} zoom={map.zoom} maxZoom={map.maxZoom}>
+    <TileLayer
+      url={map.url}
+      attribution={map.attribution}
+    />
+    <MarkerClusterGroup>
+      {props.data.map(vehicle => <MapMarker key={vehicle.id} data={vehicle} />)}
+    </MarkerClusterGroup>
+  </Map>
+);
 
 MapWrapper.propTypes = {
-  data: PropTypes.shape(Types.marker.isRequired).isRequired,
+  data: PropTypes.arrayOf(Types.marker.isRequired).isRequired,
 };
 
 export default MapWrapper;
