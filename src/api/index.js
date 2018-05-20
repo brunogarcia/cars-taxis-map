@@ -3,7 +3,7 @@ import CONSTANTS from '../constants';
 const { HOST, PATH, TYPE } = CONSTANTS.API;
 const { TAXIS, CARS } = PATH;
 
-const checkResponse = (res) => {
+const handleErrors = (res) => {
   if (!res.ok) {
     throw Error(res.statusText);
   }
@@ -14,7 +14,7 @@ const checkResponse = (res) => {
 const get = ({ path, type }) => {
   const config = `${HOST}/${path}/${type}`;
   const req = new Request(config);
-  return fetch(req).then(res => checkResponse(res));
+  return fetch(req).then(res => handleErrors(res));
 };
 
 const api = {
