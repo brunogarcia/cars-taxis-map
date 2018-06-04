@@ -9,8 +9,8 @@ export default {
   API: {
     HOST: 'http://localhost:5000',
     PATH: {
-      CARS: 'car2go',
-      TAXIS: 'mytaxi',
+      CARS: 'cars',
+      TAXIS: 'taxi',
     },
     TYPE: {
       VEHICLES: 'vehicles',
