@@ -1,6 +1,10 @@
-This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
+# Cars and taxis
 
-This repository works together with [API for cars and taxis](https://github.com/brunogarcia/node-api-cars-taxis)
+This repository works together with this [API for cars and taxis](https://github.com/brunogarcia/node-api-cars-taxis).
+
+So, it's necessary to run that API to get proper data.
+
+This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 ## Available Scripts
 
