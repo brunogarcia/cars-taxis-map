@@ -10,7 +10,7 @@ export default {
     HOST: 'http://localhost:5000',
     PATH: {
       CARS: 'cars',
-      TAXIS: 'taxi',
+      TAXIS: 'taxis',
     },
     TYPE: {
       VEHICLES: 'vehicles',
