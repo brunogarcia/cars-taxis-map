@@ -17,7 +17,7 @@ function Header() {
       <AppBar position="static" color="default" className="Header-main">
         <Toolbar>
           <Typography variant="subheading">
-            A Front-end test by <a href="http://blog.garciaechegaray.com/about-me/">Bruno Garcia</a>
+            A project made by <a href="https://garciaechegaray.com">Bruno Garcia</a>
           </Typography>
         </Toolbar>
       </AppBar>
